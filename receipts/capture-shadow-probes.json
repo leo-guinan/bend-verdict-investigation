@@ -1,0 +1,38 @@
+[
+  {
+    "tag": "original",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : b\n- observed : a\nContext:\n- f : @s:(@a:Bit -> @b:Bit -> Bit) -> @e:(@a:Bit -> @b:Bit -> {b == s(b, a) : Bit}) -> {Zb{} == s(Zb{}, Ob{}) : Bit}\n- a : Bit\n- b : Bit\nLocation: bad\n36 |   }\n37>|   f(a => b => b, a => b => {==})\n   |                            ^^^^\n38 | \n",
+    "sha256": "ab2006b958404483fb23942473bb95ce39befc98aa0ae28d556c93ab4af5482f"
+  },
+  {
+    "tag": "alpha",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : v\n- observed : u\nContext:\n- f : @q:(@u:Bit -> @v:Bit -> Bit) -> @w:(@u:Bit -> @v:Bit -> {v == q(v, u) : Bit}) -> {Zb{} == q(Zb{}, Ob{}) : Bit}\n- u : Bit\n- v : Bit\nLocation: bad\n36 |   }\n37>|   f(u => v => v, u => v => {==})\n   |                            ^^^^\n38 | \n",
+    "sha256": "dcaafa5bb091af4689c5150b97fa7782145a31627ec05d41a239746819f85bf9"
+  },
+  {
+    "tag": "outer_only",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : right\n- observed : left\nContext:\n- f     : @scope:(@left:Bit -> @right:Bit -> Bit) -> @evid:(@left:Bit -> @right:Bit -> {right == scope(right, left) : Bit}) -> {Zb{} == scope(Zb{}, Ob{}) : Bit}\n- left  : Bit\n- right : Bit\nLocation: bad\n36 |   }\n37>|   f(left => right => right, left => right => {==})\n   |                                              ^^^^\n38 | \n",
+    "sha256": "049671436279071ca5e2412bfca1bd0771b374c9232b12acd42bcd779de50c82"
+  },
+  {
+    "tag": "inner_names",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : y\n- observed : x\nContext:\n- f : @s:(@a:Bit -> @b:Bit -> Bit) -> @e:(@a:Bit -> @b:Bit -> {b == s(b, a) : Bit}) -> {Zb{} == s(Zb{}, Ob{}) : Bit}\n- x : Bit\n- y : Bit\nLocation: bad\n36 |   }\n37>|   f(x => y => y, x => y => {==})\n   |                            ^^^^\n38 | \n",
+    "sha256": "05b628f02b467f86b61fc1e40b894f9ac1353519b5e21ffcd4f0bcbbc796571c"
+  },
+  {
+    "tag": "motive_names",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : a defined name\n- observed : s\nContext:\n- scope : @a:Bit -> @b:Bit -> Bit\n- a     : Bit\n- b     : Bit\nLocation: bad\n33 |     @scope:(@a:Bit -> @b:Bit -> Bit) ->\n34>|     @evid:(@a:Bit -> @b:Bit -> {b == s(b, a) : Bit}) ->\n   |                                      ^\n35 |     {Zb{} == s(Zb{}, Ob{}) : Bit}\n",
+    "sha256": "85a5a5ebf5cbd5f1f322d76244a3e9589b99a36078a1eb8efd0a01e70af395d4"
+  },
+  {
+    "tag": "all_distinct",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : b\n- observed : a\nContext:\n- f : @scope:(@a:Bit -> @b:Bit -> Bit) -> @evid:(@a:Bit -> @b:Bit -> {b == scope(b, a) : Bit}) -> {Zb{} == scope(Zb{}, Ob{}) : Bit}\n- a : Bit\n- b : Bit\nLocation: bad\n36 |   }\n37>|   f(a => b => b, a => b => {==})\n   |                            ^^^^\n38 | \n",
+    "sha256": "ef40cff4993dbb073720140c68e5bb79b999330ee14c290f4d6c81785ef46842"
+  }
+]

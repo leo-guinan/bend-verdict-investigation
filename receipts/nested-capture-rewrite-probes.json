@@ -1,0 +1,38 @@
+[
+  {
+    "tag": "baseline",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "a9b90590384340a172e41c2c77c159a234326d1af8fb03488969dcf8d4c9c378"
+  },
+  {
+    "tag": "motive_a",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : N\n- observed : {S{a^0} == _ : N}\nContext:\n- a : N\n- b : N\n- e : {S{a} == S{b} : N}\n- _ : N\n- a : {S{a} == _ : N}\nLocation: lift\n12 | def lift(~P: Type, a: N, b: N, e: {S{a} == S{b} : N}) -> {a == b : N}:\n13>|   %a@e : {pred(S{a}) == pred(_) : N}\n   |                  ^\n14 |   {==}\n",
+    "sha256": "42b59961110fd771d53f690cffd22b0810aae83c02e50521fe6a4c5e124ffad8"
+  },
+  {
+    "tag": "motive_b",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "85d07a6efc886e9f49323ac2863691bdf41752d63af8342919b6b3e691b4f287"
+  },
+  {
+    "tag": "motive_Q",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "9d10d3a8707b2642b1d25bdc606e5173f41421130c264deb4556a560dccd5b6a"
+  },
+  {
+    "tag": "nested_outer",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "ace19daedaf28b1b9a4a0dc8ae560083cb006800416e86d822b2be59dce1a57e"
+  },
+  {
+    "tag": "swap_call",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : {S{b} == S{a} : N}\n- observed : {S{a} == S{b} : N}\nContext:\n- a : N\n- b : N\n- e : {S{a} == S{b} : N}\nLocation: wrap\n16 | def wrap(~Q: Type, a: N, b: N, e: {S{a} == S{b} : N}) -> {a == b : N}:\n17>|   lift(~Q, b, a, e)\n   |                  ^\n18 | \n",
+    "sha256": "fd8f49f72365a6fe81fae2fd0a3d50db3118905f3055d3b3351fabe9989dfd38"
+  }
+]

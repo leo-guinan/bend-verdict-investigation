@@ -1,0 +1,38 @@
+[
+  {
+    "tag": "direct",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : Empty\n- observed : Packet<False{}>\nLocation: contradiction\n28 | def contradiction() -> Apply(~Payload, True{}):\n29>|   seed\n   |   ^^^^\n30 | \n",
+    "sha256": "ead7c965ec1610441bd7e9a50a5af040a113c273f3b71a87f0dfdcf9194c6c38"
+  },
+  {
+    "tag": "alias",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : Empty\n- observed : Packet<False{}>\nLocation: contradiction\n28 | def contradiction() -> Alias(~Payload, True{}):\n29>|   seed\n   |   ^^^^\n30 | \n",
+    "sha256": "544f2032b76286ff0ddc6030c51c40ea88221791f60369d2c6489782481bb9cd"
+  },
+  {
+    "tag": "id_true",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : Empty\n- observed : Packet<False{}>\nLocation: contradiction\n28 | def contradiction() -> Apply(~Payload, BoolId(True{})):\n29>|   seed\n   |   ^^^^\n30 | \n",
+    "sha256": "24d1291e3bc720655733bbcc74f0cce2bbbb570256fca97cdbfaab4a3c116cbb"
+  },
+  {
+    "tag": "not_false",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : Empty\n- observed : Packet<False{}>\nLocation: contradiction\n28 | def contradiction() -> Apply(~Payload, BoolNot(False{})):\n29>|   seed\n   |   ^^^^\n30 | \n",
+    "sha256": "7e2c43ed79a3d63b9b2f58d089c60d103bda8490c461b9349f62d6ce08369937"
+  },
+  {
+    "tag": "double_not",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : Empty\n- observed : Packet<False{}>\nLocation: contradiction\n28 | def contradiction() -> Alias(~Payload, BoolNot(BoolNot(True{}))):\n29>|   seed\n   |   ^^^^\n30 | \n",
+    "sha256": "a6938296d40ce7c2cea64a9e966c15fd8c63ac0f9c708b949f65c260bceb4b11"
+  },
+  {
+    "tag": "packet_alias",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : Packet<True{}>\n- observed : Packet<False{}>\nLocation: contradiction\n28 | def contradiction() -> Apply(~(b => Packet<b>), True{}):\n29>|   seed\n   |   ^^^^\n30 | \n",
+    "sha256": "eb918b0dc994a5909dffc3faf422ba7dce1b597f3434f567cd506c0cb8956d48"
+  }
+]

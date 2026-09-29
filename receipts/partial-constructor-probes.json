@@ -1,0 +1,38 @@
+[
+  {
+    "tag": "direct",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "4f889cae77b43d49cf99e8cd71c38c6aa19211f83c96ad0576dc89187b069d27"
+  },
+  {
+    "tag": "specialized",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "c366de391f2ab3da339d254c23a91ec14f413c24f0bbae48a6db9dadfada7c6b"
+  },
+  {
+    "tag": "lambda_ctor",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "626f93c592b5baba4aa8f9fa2ffb461f968080d99a18970eef4cce93dcc7bd41"
+  },
+  {
+    "tag": "let_ctor",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "8aa342c523827d3dac2d107087ebd8d61757bb1719e328288b12e8bcc7e1c207"
+  },
+  {
+    "tag": "wrong_specialization",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : Bool\n- observed : Nat\nLocation: main\n16 | def main() -> Nat:\n17>|   get(make_any(~Bool, 3n))\n   |                       ^^\n18 | \n",
+    "sha256": "7af9acf3a66cc3b64916567438dc1eda554f23a01570e95a4d3be65333d413ca"
+  },
+  {
+    "tag": "omitted_template",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : Type\n- observed : Nat\nLocation: main\n16 | def main() -> Nat:\n17>|   get(make_any(3n))\n   |                ^^\n18 | \n",
+    "sha256": "f37015aae696608244dba19b17b1715ff46210c502df310d53a4ab108766668d"
+  }
+]

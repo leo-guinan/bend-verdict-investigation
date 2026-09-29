@@ -1,0 +1,66 @@
+[
+  {
+    "tag": "F_affine",
+    "sha256": "e572bd22defd68b5faf99118fade654cf8400a82e2f482f4f38dad834093eccd",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\n"
+      }
+    ]
+  },
+  {
+    "tag": "F_erased",
+    "sha256": "8192c68444dd5f65bb037df3e2960235950fc3da5290b71648d8224fd06486e1",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nError:\n- expected : -F\n- observed : F\nLocation: use\n15 | \n16>| def use(-F: @a: N -> @b: N -> {S{a} == S{b} : N} -> {a == b : N}, a: N, b: N, e: {S{a} == S{b} : N}) -> {a == b : N}:\n   |          ^\n17 |   F(a, b, e)\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nError:\n- expected : -F\n- observed : F\nLocation: use\n15 | \n16>| def use(-F: @a: N -> @b: N -> {S{a} == S{b} : N} -> {a == b : N}, a: N, b: N, e: {S{a} == S{b} : N}) -> {a == b : N}:\n   |          ^\n17 |   F(a, b, e)\n"
+      }
+    ]
+  },
+  {
+    "tag": "simple_F",
+    "sha256": "d43b943070a580e7585f1ff1aa4573740bed7b2c2302f7e8ab80ffd259d4ea23",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nError:\n- expected : a function type\n- observed : N\nContext:\n- a : N\n- b : N\n- e : {S{a} == S{b} : N}\nLocation: use\n16 | def use(~F: @a: N -> N, a: N, b: N, e: {S{a} == S{b} : N}) -> {a == b : N}:\n17>|   F(a, b, e)\n   |   ^^^^^^^^^^\n18 | \n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nError:\n- expected : a function type\n- observed : N\nContext:\n- a : N\n- b : N\n- e : {S{a} == S{b} : N}\nLocation: use\n16 | def use(~F: @a: N -> N, a: N, b: N, e: {S{a} == S{b} : N}) -> {a == b : N}:\n17>|   F(a, b, e)\n   |   ^^^^^^^^^^\n18 | \n"
+      }
+    ]
+  },
+  {
+    "tag": "no_template",
+    "sha256": "b4cf723301464c5bae221a30e876998fe2e08f5fc46dc2271faae9869d66df85",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\n"
+      }
+    ]
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "tag": "direct",
+    "sha256": "913863038c167992fcc803568c53e1d45fdbc9f899150bdc5814e018adfc9eaf",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nSorry - this is a mismatch between the TypeScript implementation, and the formalized BendTT kernel. Your proofs may or may not be correct, and we cannot validate them yet. This will be addressed in a future update. Meanwhile, feel free to open an issue to report this bug.\n"
+      }
+    ]
+  },
+  {
+    "tag": "eta_call",
+    "sha256": "16434c91035fa62fdd9fe7332d83568a7c8ab7c42f436ff54b2ab9d22b4d1181",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nSorry - this is a mismatch between the TypeScript implementation, and the formalized BendTT kernel. Your proofs may or may not be correct, and we cannot validate them yet. This will be addressed in a future update. Meanwhile, feel free to open an issue to report this bug.\n"
+      }
+    ]
+  },
+  {
+    "tag": "let_fn",
+    "sha256": "249c844c7f92e195f8dd8d2add966b52540e0ad92c643a2aaad70767849d851b",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nSorry - this is a mismatch between the TypeScript implementation, and the formalized BendTT kernel. Your proofs may or may not be correct, and we cannot validate them yet. This will be addressed in a future update. Meanwhile, feel free to open an issue to report this bug.\n"
+      }
+    ]
+  },
+  {
+    "tag": "annotated_fn",
+    "sha256": "1c9294a175d0c1fb66b48dd56d9a7ecdcd14400f3c3240191b73df6d29b84770",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nSorry - this is a mismatch between the TypeScript implementation, and the formalized BendTT kernel. Your proofs may or may not be correct, and we cannot validate them yet. This will be addressed in a future update. Meanwhile, feel free to open an issue to report this bug.\n"
+      }
+    ]
+  },
+  {
+    "tag": "template_eta",
+    "sha256": "1b283af91eff12c21a284a6c435d2ef8ca68c38cec4f521a5c46a5fe4f21e65f",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nSorry - this is a mismatch between the TypeScript implementation, and the formalized BendTT kernel. Your proofs may or may not be correct, and we cannot validate them yet. This will be addressed in a future update. Meanwhile, feel free to open an issue to report this bug.\n"
+      }
+    ]
+  },
+  {
+    "tag": "result_empty",
+    "sha256": "31ed6fbdf424403588a5dc4139005e1a0ae7d4f190ab4ba0c06c6c06c7c980de",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nError:\n- expected : Empty\n- observed : {a == b : N}\nContext:\n- a : N\n- b : N\n- e : {S{a} == S{b} : N}\nLocation: use\n16 | def use(~F: @a: N -> @b: N -> {S{a} == S{b} : N} -> {a == b : N}, a: N, b: N, e: {S{a} == S{b} : N}) -> Empty:\n17>|   F(a, b, e)\n   |   ^^^^^^^^^^\n18 | \n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nError:\n- expected : Empty\n- observed : {a == b : N}\nContext:\n- a : N\n- b : N\n- e : {S{a} == S{b} : N}\nLocation: use\n16 | def use(~F: @a: N -> @b: N -> {S{a} == S{b} : N} -> {a == b : N}, a: N, b: N, e: {S{a} == S{b} : N}) -> Empty:\n17>|   F(a, b, e)\n   |   ^^^^^^^^^^\n18 | \n"
+      }
+    ]
+  },
+  {
+    "tag": "evidence_template",
+    "sha256": "fbc327c438fed35855f342443793bd176bb887c630c09a702b025f870fbde7d3",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nError:\n- expected : a term\n- observed : '~'\nLocation:\n16 | def use(~F: @a: N -> @b: N -> {S{a} == S{b} : N} -> {a == b : N}, a: N, b: N, e: {S{a} == S{b} : N}) -> {a == b : N}:\n17>|   apply_e(~F, a, b, e)\n   |           ^\n18 | \n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nError:\n- expected : a term\n- observed : '~'\nLocation:\n16 | def use(~F: @a: N -> @b: N -> {S{a} == S{b} : N} -> {a == b : N}, a: N, b: N, e: {S{a} == S{b} : N}) -> {a == b : N}:\n17>|   apply_e(~F, a, b, e)\n   |           ^\n18 | \n"
+      }
+    ]
+  }
+]

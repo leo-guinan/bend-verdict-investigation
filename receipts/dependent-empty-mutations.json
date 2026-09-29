@@ -1,0 +1,98 @@
+[
+  {
+    "tag": "direct",
+    "sha256": "e8794098f54c888dd1007dc35e3bc34facb0c826eeddb46c5e54accb8ec9c45c",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nSorry - this is a mismatch between the TypeScript implementation, and the formalized BendTT kernel. Your proofs may or may not be correct, and we cannot validate them yet. This will be addressed in a future update. Meanwhile, feel free to open an issue to report this bug.\n"
+      }
+    ]
+  },
+  {
+    "tag": "match_a",
+    "sha256": "63046dc22c40a4fca643e2646df887521ab435a0e9b47998b83a1a670e7c03b4",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nSorry - this is a mismatch between the TypeScript implementation, and the formalized BendTT kernel. Your proofs may or may not be correct, and we cannot validate them yet. This will be addressed in a future update. Meanwhile, feel free to open an issue to report this bug.\n"
+      }
+    ]
+  },
+  {
+    "tag": "match_b",
+    "sha256": "358dadce973c37e12003aa395aba85bf21dc98181c0561d2f75f52a70150f6a1",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nSorry - this is a mismatch between the TypeScript implementation, and the formalized BendTT kernel. Your proofs may or may not be correct, and we cannot validate them yet. This will be addressed in a future update. Meanwhile, feel free to open an issue to report this bug.\n"
+      }
+    ]
+  },
+  {
+    "tag": "let_result",
+    "sha256": "1a138e33bd08391e67eb663f0a593b0ab16ee1be09c7a4e8728dcfacbed279a7",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nSorry - this is a mismatch between the TypeScript implementation, and the formalized BendTT kernel. Your proofs may or may not be correct, and we cannot validate them yet. This will be addressed in a future update. Meanwhile, feel free to open an issue to report this bug.\n"
+      }
+    ]
+  },
+  {
+    "tag": "annotated_result",
+    "sha256": "2c2f5175babe4c40712a8368337577b8d643379ee9eed7461b423d669c232a0c",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nSorry - this is a mismatch between the TypeScript implementation, and the formalized BendTT kernel. Your proofs may or may not be correct, and we cannot validate them yet. This will be addressed in a future update. Meanwhile, feel free to open an issue to report this bug.\n"
+      }
+    ]
+  },
+  {
+    "tag": "rewrite_result",
+    "sha256": "9290b1bd96057d4b8e71c6387c9df915c07b421a6607711bf775384f9bd0541d",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nError:\n- expected : Out(a)\n- observed : {a == b : N}\nContext:\n- a : N\n- b : N\n- e : {a == b : N}\nLocation: use\n14 | def use(~F: @a: N -> @b: N -> {a == b : N} -> Out(a), a: N, b: N, e: {a == b : N}) -> Out(a):\n15>|   %h@e : {a == _ : N}\n   |   ^^^^^^^^^^^^^^^^^^^\n16 |   F(a,b,e)\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nError:\n- expected : Out(a)\n- observed : {a == b : N}\nContext:\n- a : N\n- b : N\n- e : {a == b : N}\nLocation: use\n14 | def use(~F: @a: N -> @b: N -> {a == b : N} -> Out(a), a: N, b: N, e: {a == b : N}) -> Out(a):\n15>|   %h@e : {a == _ : N}\n   |   ^^^^^^^^^^^^^^^^^^^\n16 |   F(a,b,e)\n"
+      }
+    ]
+  }
+]

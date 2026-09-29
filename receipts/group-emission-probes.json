@@ -1,0 +1,32 @@
+[
+  {
+    "tag": "baseline",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "15dbf90db0ab114c1225f9a5a5bf0fa4cae2e9167ac749394d8923ca8132513c"
+  },
+  {
+    "tag": "helper_default",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "da2bed9e18d1096a8975ec3b1a2f6cb2a9f34bafd2c04798ff756484e64b4728"
+  },
+  {
+    "tag": "nested_helper",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "813407744c247a719156f1445230cfbfed0ce568d2ac8d1ec2c3ed78dc481241"
+  },
+  {
+    "tag": "two_helpers",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "501e9c65811babb7994513c5d219dc69c0c7034c913edb26b5b085859fd86cc3"
+  },
+  {
+    "tag": "empty_tail",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : cases for S\n- observed : \\{}\nLocation: f.g\n12 | def f.g(n: N, rest: Unit2 -> N) -> N:\n13>|   match n:\n   |   ^^^^^^^^\n14 |     case Z{}: rest(U{})\n",
+    "sha256": "ef0c01ce843d1475bcba9e4b7b685a97fd8d22c1f083e68c17eb60a392b68dcb"
+  }
+]

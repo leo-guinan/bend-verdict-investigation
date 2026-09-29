@@ -1,0 +1,38 @@
+[
+  {
+    "tag": "direct",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : Empty\n- observed : Unit\nLocation: contradiction\n31 | def contradiction() -> Pick(~ANode{ANode{ALeaf{Unit{}}, ALeaf{Unit{}}}, ALeaf{Unit{}}}):\n32>|   seed\n   |   ^^^^\n33 | \n",
+    "sha256": "c41af601c1ad0e40ee6ecfa14b9a5ed86249ca3c11ca10d99d94764b0f7df96e"
+  },
+  {
+    "tag": "id",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : Empty\n- observed : Unit\nLocation: contradiction\n31 | def contradiction() -> Pick(~Id(~ANode{ANode{ALeaf{Unit{}}, ALeaf{Unit{}}}, ALeaf{Unit{}}})):\n32>|   seed\n   |   ^^^^\n33 | \n",
+    "sha256": "d5ffd75cbc811f1a2e9c796243440f9576932968190a7d11352057c07ce054eb"
+  },
+  {
+    "tag": "eta",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : Empty\n- observed : Unit\nLocation: contradiction\n31 | def contradiction() -> Pick(~Eta(~ANode{ANode{ALeaf{Unit{}}, ALeaf{Unit{}}}, ALeaf{Unit{}}})):\n32>|   seed\n   |   ^^^^\n33 | \n",
+    "sha256": "ba256ff201862a614e57b87ac6c91a046b3d34f772f06d0299b8ceaa26002b79"
+  },
+  {
+    "tag": "wrap",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : Type\n- observed : Array\nLocation: seed\n27 | \n28>| def seed() -> Pick(~Wrap(~ANode{ALeaf{Unit{}}, ANode{ALeaf{Unit{}}, ALeaf{Unit{}}}})):\n   |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n29 |   Unit{}\n",
+    "sha256": "c735c5110a504ca886ee95b1f8a87fef17aa41fe70b8e47299043682d46942d9"
+  },
+  {
+    "tag": "nested_alias",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : Empty\n- observed : Unit\nLocation: contradiction\n31 | def contradiction() -> Pick(~Id(~Eta(~ANode{ANode{ALeaf{Unit{}}, ALeaf{Unit{}}}, ALeaf{Unit{}}}))):\n32>|   seed\n   |   ^^^^\n33 | \n",
+    "sha256": "8e1f943aa981c88dd707d629eabf36d62df9d00327ac146c8ec2fb4da4939761"
+  },
+  {
+    "tag": "same_runtime_alias",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "527e4ee326cac81d14f2d1475d73d6efe93c237a8df9c85f852cd06eb6a42f0b"
+  }
+]

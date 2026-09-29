@@ -1,0 +1,32 @@
+[
+  {
+    "tag": "plain",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "9cc329432806cfe88d04256b24a59d96cfcb2b12625195f6427c9804c1dba0ce"
+  },
+  {
+    "tag": "nested_match",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : {S{ap} == b : N}\n- observed : {ap == b : N}\nContext:\n- ap : N\n- b  : N\n- e  : {S{S{ap}} == S{b} : N}\nLocation: q\n29 |     case S{ap}:\n30>|       %x@e : {pred(S{ap}) == pred(_) : N}\n   |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n31 |       {==}\n",
+    "sha256": "565a37f70463f1d9a946124ac26873097e3a549cb0baaeef1be6a4d5b497f8f0"
+  },
+  {
+    "tag": "endpoint_swap",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : {a == b : N}\n- observed : {b == b : N}\nContext:\n- a : N\n- b : N\n- e : {S{a} == S{b} : N}\nLocation: q\n24 | def q(a,b,e):\n25>|   %x@e : {pred(_) == pred(S{b}) : N}\n   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n26 |   {==}\n",
+    "sha256": "c0936dc2b27409e835bd8906362b45eec029466a03de2c16feb7e4436db3f6bc"
+  },
+  {
+    "tag": "double_rewrite",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : a defined name\n- observed : x\nContext:\n- a : N\n- b : N\n- e : {S{a} == S{b} : N}\nLocation: q\n25 |   %x@e : {pred(S{a}) == pred(_) : N}\n26>|   %y@x : {pred(S{a}) == pred(_) : N}\n   |      ^\n27 |   {==}\n",
+    "sha256": "ac0f4e3fe22371166f1988a52d220852ea4f7419278ee8868f1b51eb44342505"
+  },
+  {
+    "tag": "empty_claim",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : EmptyQ\n- observed : {a == b : N}\nContext:\n- a : N\n- b : N\n- e : {S{a} == S{b} : N}\nLocation: q\n26 | def q(a,b,e):\n27>|   %x@e : {pred(S{a}) == pred(_) : N}\n   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n28 |   {==}\n",
+    "sha256": "a51f80d1eed36be40df33d9c670f5aebbdf7435eb35215bec1606bdac4f6dc5a"
+  }
+]

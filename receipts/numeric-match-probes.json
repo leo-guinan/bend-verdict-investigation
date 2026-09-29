@@ -1,0 +1,82 @@
+[
+  {
+    "tag": "zero",
+    "sha256": "aefc3cdba7ffa9c2e2b00521719bc9846fcc8e901124d72484b1d30b14a4866b",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\n"
+      }
+    ]
+  },
+  {
+    "tag": "one",
+    "sha256": "3c169317289bad4b68eefb3a6401918de351a5dcaa2b63f8af5eb5afefac1a09",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\n"
+      }
+    ]
+  },
+  {
+    "tag": "succ",
+    "sha256": "1ac3a28433cacd07d1570bb1a9d8c663cd7d2918ebd325098d5bc882777bc6b9",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\n"
+      }
+    ]
+  },
+  {
+    "tag": "large",
+    "sha256": "52ef28c0729faaf4cf4fbf5e67517b8ec39dd789b70335bfc078825926faeaea",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\n"
+      }
+    ]
+  },
+  {
+    "tag": "nested",
+    "sha256": "2f686eac6448fc3b8249e2394dc43d14e5729e07b883f82bf93098d1ca1e754b",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\n"
+      }
+    ]
+  }
+]

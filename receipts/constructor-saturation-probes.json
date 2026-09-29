@@ -1,0 +1,38 @@
+[
+  {
+    "tag": "correct",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "e32b4cc069cee7f8dcb2c0f94ab3d2fdab30db12560f9e1923faa9f01a59ad83"
+  },
+  {
+    "tag": "explicit_ann",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : ':'\n- observed : '}'\nLocation:\n23 | def packed() -> DPair<&2, &2, N, isZ>:\n24>|   ({MkP{Z{}, U{}}} : DPair<&2, &2, N, isZ>)\n   |                  ^\n25 | \n",
+    "sha256": "8805078005355b9042ebb20f15025a3ec84a60070571d6aa79ea15408cbf3b8f"
+  },
+  {
+    "tag": "wrong_index",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : Emp\n- observed : Uni\nLocation: packed\n23 | def packed() -> DPair<&2, &2, N, isZ>:\n24>|   MkP{S{Z{}}, U{}}\n   |               ^^^\n25 | \n",
+    "sha256": "b7f18f1ca6594bbab853e9bba7daaf1c9167b5779a5adfe684b4a7483a299c7c"
+  },
+  {
+    "tag": "wrong_field",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : Uni\n- observed : Data\nLocation: packed\n23 | def packed() -> DPair<&2, &2, N, isZ>:\n24>|   MkP{Z{}, Emp}\n   |            ^^^\n25 | \n",
+    "sha256": "b144aa4fb3b36a34ff7d744d4589ca05cfa78e74f66dba6989ff0f53d4abf401"
+  },
+  {
+    "tag": "eta_family",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "52cdae8cbec1c35c096f4c85963a840ea860191d1c2150db4581220dfb7a1064"
+  },
+  {
+    "tag": "nested_pair",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "c16a0a701ae4bd3177f4bf84d4a837225883aa8d4460bd9a2dbf439c47fd923a"
+  }
+]

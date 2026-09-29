@@ -1,0 +1,38 @@
+[
+  {
+    "tag": "route_g_h",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "327e60530aafac2b75a1a65927210dbb49f8bf1ba217e758a93f45215edc9339"
+  },
+  {
+    "tag": "swap_tags",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "3d09d309650434e3c93017d2326d4473e38b390e32c7e028d8de2eae912ed8ef"
+  },
+  {
+    "tag": "different_leads",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : p\n- observed : p (consumed more than once)\nLocation: f\n20 |     case Z{}: Z{}\n21>|     case S{p}: f.g(p, u => f.h(Z{}, v => f(p)))\n   |            ^\n22 | \n",
+    "sha256": "0ca89e5e51caf67beb762a903a6b295d2704c3919b0e06916eafc68a60da2c59"
+  },
+  {
+    "tag": "partial_helper",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : N\n- observed : @rest:(@_:Unit2 -> N) -> N\nContext:\n- p : N\nLocation: f\n20 |     case Z{}: Z{}\n21>|     case S{p}: f.g(Z{})\n   |                ^^^^^^^^\n22 | \n",
+    "sha256": "be788909843f26bac5958795258f3494b4b7e24e8df059e2dde4f1635b01401d"
+  },
+  {
+    "tag": "three_members",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "920ff637e25ae2725985716a35423b02ff4145a14628105b01c5eedd735b2188"
+  },
+  {
+    "tag": "eta_state",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "2c58fbe8e6e45aa79f7e0ae7b706796d720a9cff56cb646dcdce2e8484af97ba"
+  }
+]

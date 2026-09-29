@@ -1,0 +1,32 @@
+[
+  {
+    "tag": "one",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "06750b2afc69059296e430e7a4dbcce27366e98418209a85496eab68ac506392"
+  },
+  {
+    "tag": "two_types",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "15cae0be9d86c8cd53b988048bfc5defd53d862e56bb506cf64ed4090695e011"
+  },
+  {
+    "tag": "swap_specialized",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "c41e4a105f243f17181a1b5750d435ad54631d5c3d679a26f730d6a0fd82e603"
+  },
+  {
+    "tag": "same_tag_diff_type",
+    "rc": 0,
+    "out": "ALL PROOFS CHECK\n",
+    "sha256": "e24812ebf9b5fc2457699008534e8606141133af4e7f6e796fe4b9ec4c4ef45a"
+  },
+  {
+    "tag": "partial_spec",
+    "rc": 1,
+    "out": "SOME PROOFS FAIL\nError:\n- expected : Type\n- observed : N\nLocation: f\n19 |     case Z{}: Z{}\n20>|     case S{p}: f.g(Z{}, u => f(p))\n   |                    ^^^\n21 | \n",
+    "sha256": "4cd710151f13dc5d82838a65be09d314e4462602d563a9c9dead523806c95b82"
+  }
+]

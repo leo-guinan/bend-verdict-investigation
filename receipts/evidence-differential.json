@@ -1,0 +1,50 @@
+[
+  {
+    "tag": "inj_only",
+    "sha256": "9f685909042e9a5384928099a0f6ebb30a4d5f354776f73efaff1f4149d52f19",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\n"
+      }
+    ]
+  },
+  {
+    "tag": "use_no_call",
+    "sha256": "913863038c167992fcc803568c53e1d45fdbc9f899150bdc5814e018adfc9eaf",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nSorry - this is a mismatch between the TypeScript implementation, and the formalized BendTT kernel. Your proofs may or may not be correct, and we cannot validate them yet. This will be addressed in a future update. Meanwhile, feel free to open an issue to report this bug.\n"
+      }
+    ]
+  },
+  {
+    "tag": "use_call",
+    "sha256": "df8934729eaa274e5d60252ea397fa93cd28a6807d18fec5c4ffdafd084029bd",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nError:\n- expected : N\n- observed : {Z{} == Z{} : N}\nLocation: main\n19 | def main() -> N:\n20>|   inj(Z{}, Z{}, {==})\n   |   ^^^^^^^^^^^^^^^^^^^\n21 | \n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nError:\n- expected : N\n- observed : {Z{} == Z{} : N}\nLocation: main\n19 | def main() -> N:\n20>|   inj(Z{}, Z{}, {==})\n   |   ^^^^^^^^^^^^^^^^^^^\n21 | \n"
+      }
+    ]
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "tag": "unused",
+    "sha256": "e8794098f54c888dd1007dc35e3bc34facb0c826eeddb46c5e54accb8ec9c45c",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nSorry - this is a mismatch between the TypeScript implementation, and the formalized BendTT kernel. Your proofs may or may not be correct, and we cannot validate them yet. This will be addressed in a future update. Meanwhile, feel free to open an issue to report this bug.\n"
+      }
+    ]
+  },
+  {
+    "tag": "demanded_template",
+    "sha256": "81bdba8db0077ee297097748971057695d4434e478e35c181e12ea316b7a9f9b",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nSorry - this is a mismatch between the TypeScript implementation, and the formalized BendTT kernel. Your proofs may or may not be correct, and we cannot validate them yet. This will be addressed in a future update. Meanwhile, feel free to open an issue to report this bug.\n"
+      }
+    ]
+  },
+  {
+    "tag": "demanded_alias",
+    "sha256": "16f7f50a266bae1a8f7f783fd612cb3a68b78962d9187529aa2f117381e822a5",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nError:\n- expected : 'def', 'type' or 'law'\n- observed : 'Z'\nLocation:\n24 |   route(~G)\n25>|   Z{}\n   |   ^\n26 | \n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nError:\n- expected : 'def', 'type' or 'law'\n- observed : 'Z'\nLocation:\n24 |   route(~G)\n25>|   Z{}\n   |   ^\n26 | \n"
+      }
+    ]
+  },
+  {
+    "tag": "called_template",
+    "sha256": "8ec5d3e6c4691772b894f1ea79e7d3de534e0e4ac41bae660286d71dbdc09658",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nSorry - this is a mismatch between the TypeScript implementation, and the formalized BendTT kernel. Your proofs may or may not be correct, and we cannot validate them yet. This will be addressed in a future update. Meanwhile, feel free to open an issue to report this bug.\n"
+      }
+    ]
+  }
+]

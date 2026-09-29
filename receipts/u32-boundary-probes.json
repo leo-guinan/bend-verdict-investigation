@@ -1,0 +1,98 @@
+[
+  {
+    "tag": "zero",
+    "sha256": "c70a5c105e7e39870a413c582140fcdbe288046fe735a72d2a16da6734913d9a",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\n"
+      }
+    ]
+  },
+  {
+    "tag": "one",
+    "sha256": "23248a5a1858e1329f785d19a02279a3a8abea870893a9ba974ccc7fed8f32bf",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\n"
+      }
+    ]
+  },
+  {
+    "tag": "max",
+    "sha256": "05936629f32fb471366440d4f278cbc6a3c09f088b09ce90a7408a4893465904",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\n"
+      }
+    ]
+  },
+  {
+    "tag": "mid",
+    "sha256": "e2406f45bbeefb5a857e9cd8e720f635ac9add2150895c120265f967852e9657",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 0,
+        "out": "ALL PROOFS CHECK\n"
+      }
+    ]
+  },
+  {
+    "tag": "overflow",
+    "sha256": "a9719dd2a5bfe416a9d7c2b1855df8d94f60555e39937381b927fb85a70759b2",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nError:\n- expected : a u32 literal up to 4294967295 (got 4294967296)\n- observed : '4294967296'\nLocation:\n10 | def main() -> U32:\n11>|   f(4294967296)\n   |     ^^^^^^^^^^\n12 | \n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nError:\n- expected : a u32 literal up to 4294967295 (got 4294967296)\n- observed : '4294967296'\nLocation:\n10 | def main() -> U32:\n11>|   f(4294967296)\n   |     ^^^^^^^^^^\n12 | \n"
+      }
+    ]
+  },
+  {
+    "tag": "negative",
+    "sha256": "b3b58fcb91bf88f579a8fe68f15049d1adc141f55429b95e198ba92c96ff3d44",
+    "runs": [
+      {
+        "flag": "--check-only",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nError:\n- expected : a term\n- observed : '-'\nLocation:\n10 | def main() -> U32:\n11>|   f(-1)\n   |     ^\n12 | \n"
+      },
+      {
+        "flag": "--verdict",
+        "rc": 1,
+        "out": "SOME PROOFS FAIL\nError:\n- expected : a term\n- observed : '-'\nLocation:\n10 | def main() -> U32:\n11>|   f(-1)\n   |     ^\n12 | \n"
+      }
+    ]
+  }
+]
